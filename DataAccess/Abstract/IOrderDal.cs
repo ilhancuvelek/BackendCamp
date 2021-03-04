@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    class IOrderDal
+    public interface IOrderDal
     {
     }
 }

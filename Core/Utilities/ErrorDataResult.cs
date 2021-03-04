@@ -6,6 +6,8 @@ namespace Core.Utilities
 {
     public class ErrorDataResult<T> : DataResult<T>
     {
+        private string userNotFound;
+
         public ErrorDataResult(T data, string message)
             : base(data, false, message)
         {
@@ -25,6 +27,11 @@ namespace Core.Utilities
         public ErrorDataResult() : base(default, false)
         {
 
+        }
+
+        public ErrorDataResult(string userNotFound) : base(default, false)
+        {
+            this.userNotFound = userNotFound;
         }
     }
 }
